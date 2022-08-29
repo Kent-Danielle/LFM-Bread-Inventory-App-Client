@@ -39,7 +39,7 @@ function AddBreadForm() {
 	useEffect(() => {
 		const isLoggedIn = checkLogInStatus();
 
-		isLoggedIn ? navigate("/home") : navigate("/login");
+		isLoggedIn ? navigate("/addBread") : navigate("/login");
 	}, []);
 
 	function handleChange(event) {
