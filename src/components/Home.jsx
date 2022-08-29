@@ -46,7 +46,7 @@ function Home() {
 	useEffect(() => {
 		const isLoggedIn = checkLogInStatus();
 
-		isLoggedIn ? navigate("/home") : navigate("/login");
+		isLoggedIn ? navigate("/home") : navigate("https://breadventory.herokuapp.com/login");
 
 		async function fetchBread() {
 			const response1 = await fetch("/data/getBreads", {
@@ -55,7 +55,7 @@ function Home() {
 
 			const result1 = await response1.json();
 
-			const response2 = await fetch("/data/getOrders", {
+			const response2 = await fetch("https://breadventory.herokuapp.com/data/getOrders", {
 				method: "GET",
 			});
 
