@@ -60,7 +60,7 @@ function AddBreadForm() {
 
 	async function handleSubmit(e) {
 		e.preventDefault();
-		const response = await fetch("/data/addBread", {
+		const response = await fetch("https://breadventory.herokuapp.com/data/addBread", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",

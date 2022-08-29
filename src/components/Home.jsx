@@ -50,13 +50,13 @@ function Home() {
 		isLoggedIn ? navigate("/home") : navigate("/login");
 
 		async function fetchBread() {
-			const response1 = await fetch("/data/getBreads", {
+			const response1 = await fetch("https://breadventory.herokuapp.com/data/getBreads", {
 				method: "GET",
 			});
 
 			const result1 = await response1.json();
 
-			const response2 = await fetch("/data/getOrders", {
+			const response2 = await fetch("https://breadventory.herokuapp.com/data/getOrders", {
 				method: "GET",
 			});
 
@@ -71,7 +71,7 @@ function Home() {
 
 	const handleLogout = async () => {
 		try {
-			const logoutResponse = await fetch("/logout", {
+			const logoutResponse = await fetch("https://breadventory.herokuapp.com/logout", {
 				method: "POST",
 			});
 		} catch (err) {
