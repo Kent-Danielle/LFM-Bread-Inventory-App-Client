@@ -9,7 +9,7 @@ function TableRow(props) {
 			<Td>
 				<Menu>
 					<MenuButton textDecor={"underline"}>{props.breadName}</MenuButton>
-					<MenuList>
+					<MenuList zIndex={"999"}>
 						<MenuItem
 							onClick={() => {
 								toggleEditModal(props.data);
