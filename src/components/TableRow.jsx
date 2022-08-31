@@ -7,7 +7,7 @@ function TableRow(props) {
 	return (
 		<Tr>
 			<Td>
-				<Menu>
+				<Menu zIndex={"999"}>
 					<MenuButton textDecor={"underline"}>{props.breadName}</MenuButton>
 					<MenuList zIndex={"999"}>
 						<MenuItem
