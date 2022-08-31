@@ -101,7 +101,6 @@ function CollapsibleHeaders(props) {
 	return (
 		<SlideFade in={true} offsetY={30}>
 			<Accordion
-				overflow={"visible"}
 				defaultIndex={[props.variant == "home" && 0]}
 				allowMultiple
 				mb={"1em"}
@@ -124,9 +123,7 @@ function CollapsibleHeaders(props) {
 							</Box>
 						</AccordionButton>
 					</h2>
-					<AccordionPanel overflow={"visible"} pb={4}>
-						{getContent(props.variant)}
-					</AccordionPanel>
+					<AccordionPanel pb={4}>{getContent(props.variant)}</AccordionPanel>
 				</AccordionItem>
 			</Accordion>
 		</SlideFade>
